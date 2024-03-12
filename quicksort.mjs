@@ -1,3 +1,8 @@
+						/*********************************************************************
+						 * ************************* This Code was writen by *****************
+						 * ************************** ANAMBOI JOHN ADUKO**********************/
+import { data10, data100 } from "./data.mjs";
+import { verify_sorted } from "./utility_funtions.mjs";
 function quicksort(list){
     if(list.length <=1) return list;
     let less_than_pivot = [];
@@ -14,5 +19,5 @@ function quicksort(list){
 
 }
 
-let usl = [4,2,3,1];
-console.log(quicksort(usl))
+console.log(verify_sorted(quicksort(data10)))
+console.log(verify_sorted(data10))

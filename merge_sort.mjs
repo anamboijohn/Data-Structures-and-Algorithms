@@ -1,12 +1,17 @@
+						/*********************************************************************
+						 * ************************* This Code was writen by *****************
+						 * ************************** ANAMBOI JOHN ADUKO**********************/
+import { data10, data100 } from "./data.mjs";
+import { verify_sorted } from "./utility_funtions.mjs";
 function merge_sort(list){
-    `
-    Sorts a list in ascending order 
-    Returns a new sorted list
     
-    Devide: find the midpoint of the list and divide into sublists
-    Conquer: Recursively sort the sublists created in the previous step
-    Combine: Merge the sorted sublists created in the previous step
-    `
+    // Sorts a list in ascending order 
+    // Returns a new sorted list
+    
+    // Devide: find the midpoint of the list and divide into sublists
+    // Conquer: Recursively sort the sublists created in the previous step
+    // Combine: Merge the sorted sublists created in the previous step
+    
     if(list.length <= 1) return list;
     let left_half, right_half;
     [left_half, right_half] = split(list);
@@ -19,10 +24,10 @@ function merge_sort(list){
   }
 
 function split(list){
-    `
-    Divide the unsorted list at midpoint into sublists
-    Returns two sublists - left and right
-    `
+    // `
+    // Divide the unsorted list at midpoint into sublists
+    // Returns two sublists - left and right
+    // `
     let mid = Math.floor(list.length / 2);
     let left = list.slice(0, mid);
     let right = list.slice(mid);
@@ -30,12 +35,12 @@ function split(list){
 }
 
 function merge(left, right){
-  `
+  // `
   
-  Merges two lists (arrays), sorting them in the process
-  returns a new merged list
+  // Merges two lists (arrays), sorting them in the process
+  // returns a new merged list
 
-  `
+  // `
   let l = [];
   let i=0;
   let j=0;
@@ -65,22 +70,9 @@ function merge(left, right){
   return l;
   }
 
-  function verify_sorted(list){
-    let n = list.length;
-    if(n==0 || n==1) return true;
-    return list[0]<list[1] && verify_sorted(list.slice(1));
+console.log(verify_sorted(data100));
+console.log(verify_sorted(merge_sort(data100)));
 
-  }
-
-let list = [3, 91, 44, 52, 4, 9, 10, 78]
-console.log(verify_sorted(list));
-console.log(verify_sorted(merge_sort(list)))
-
-function linearSearch(list){
-  for(let i = 0; i<list.length; i++){
-     
-  }
-}
 
 
 

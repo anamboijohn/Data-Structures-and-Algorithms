@@ -1,6 +1,10 @@
+						/*********************************************************************
+						 * ************************* This Code was writen by *****************
+						 * ************************** ANAMBOI JOHN ADUKO**********************/
+
 import { LinkedList, Node } from "./linked_list.mjs";
 
-function merge_sort(linked_list) {
+export default function merge_sort(linked_list) {
 	`
 	Sorts a linked list in ascending order
 	-Recursively devide the linked list into sublists containing a single node

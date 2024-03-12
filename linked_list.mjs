@@ -1,3 +1,6 @@
+						/*********************************************************************
+						 * ************************* This Code was writen by *****************
+						 * ************************** ANAMBOI JOHN ADUKO**********************/
 //implementing linked list in js
 export class Node {
     constructor(value) {
