@@ -56,7 +56,7 @@ function arrayVisualizer2(arr) {
     let maximum = Math.max(...arr);
 	let minimum = Math.min(...arr);
 	function visualize(max) {
-		
+		if(max == 0) max = -1;
 		if(minimum<0){
 			if (max < minimum) return;
 		}else{
@@ -79,5 +79,8 @@ function arrayVisualizer2(arr) {
 
     return "Done";
 }
-//console.log(arrayVisualizer(fish))
-console.log(arrayVisualizer2([1, 2, 3, 4,5,6,7,6,5,4,3,2,1,2,3,4,5,6,5,4,3,2,1,2,3,4, 5,4,3,2,1,2,3,4,3,2,1,2,3,2,1, -1, -2, -3, -4,-5,-6,-7,-6,-5,-4,-3,-2,-1,-2,-3,-4,-5,-6,-5,-4,-3,-2,-1,-2,-3,-4,-5,-4,-3,-2,-1,-2,-3,-4,-3,-2,-1,-2,-3,-2,-1]))
+console.log(arrayVisualizer2([1, 2, 3, 4, 5, 6, 7, -7, -6, -5, -4, -3, -2, -1]))
+
+
+console.log(arrayVisualizer2(fish))
+//console.log(arrayVisualizer2([1, 2, 3, 4,5,6,7,6,5,4,3,2,1,2,3,4,5,6,5,4,3,2,1,2,3,4, 5,4,3,2,1,2,3,4,3,2,1,2,3,2,1, -1, -2, -3, -4,-5,-6,-7,-6,-5,-4,-3,-2,-1,-2,-3,-4,-5,-6,-5,-4,-3,-2,-1,-2,-3,-4,-5,-4,-3,-2,-1,-2,-3,-4,-3,-2,-1,-2,-3,-2,-1]))
