@@ -15,6 +15,11 @@ let data100Sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
 let fish = [1, 2, -2, 3, -3, 4, -4, 5, -5, 6, -6, 6, -6, 6, -6, 5, -5, 4, -4, 3, -3, 2, -2, 1,2, -2, 3, -3, 4, -4, 5,-5, 6, -6, 7, -7 ]
 //export the data
 
+let a3b3m2ab = [0, 1, 4, 1, 9, 4, 1, 16, 9, 4, 1, 25, 16, 9, 4, 1, 36, 25, 16, 9, 4, 1]
+let a3b3c3m3abc =[0, 4, 5, 7,8, 10,11, 13,14, 16,17, 19,20, 22,23, 25,26, 28,29, 31,32]
+
+let iq = [0, 1, 0, 1, ]
 
 
-export {data5, data5Sorted, data10, data10Sorted, data20, data20Sorted, data100, data100Sorted, fish};
+
+export {data5, data5Sorted, data10, data10Sorted, data20, data20Sorted, data100, data100Sorted, fish, a3b3m2ab, a3b3c3m3abc};

@@ -4,7 +4,7 @@
 
 //NOTE if you are downloading this alone, download the data.mjs file for testing data, or use ur own data for testing
 
-import { data20, data20Sorted, fish } from "./data.mjs";
+import { data20, data20Sorted, fish, a3b3m2ab, a3b3c3m3abc } from "./data.mjs";
 export default function arrayVisualizer(arr) {
     let maximum = Math.max(...arr)-1;
     // console.log(maximum, " Maximum");
@@ -57,30 +57,23 @@ function arrayVisualizer2(arr) {
 	let minimum = Math.min(...arr);
 	function visualize(max) {
 		if(max == 0) max = -1;
-		if(minimum<0){
-			if (max < minimum) return;
-		}else{
-			if (max < 0 ) return;
-		}
+		if(minimum<0) if (max < minimum) return; 
+		else null; 
+		else if (max < 0 ) return;
 		let block = "";
 		for (let el of arr) {			
-				max > 0? (el >= max )? block += "# " : block += "  ":
-				max < 0? (el  <= max) ? block += "# " : block += "  ":block += " ";
-				
-				// console.log(el)
-				// console.log(block);
+				max > 0? (el >= max )? block += "0 " : block += "  ":
+				max < 0? (el  <= max) ? block += "1 " : block += "  ":block += " ";
 		}
 		console.log(block);
-
 		visualize(max - 1);
 	}
-
     visualize(maximum);
-
     return "Done";
 }
-console.log(arrayVisualizer2([1, 2, 3, 4, 5, 6, 7, -7, -6, -5, -4, -3, -2, -1]))
+console.log(arrayVisualizer2(a3b3m2ab))
+// console.log(arrayVisualizer2(a3b3c3m3abc))
 
 
-console.log(arrayVisualizer2(fish))
+//console.log(arrayVisualizer2(fish))
 //console.log(arrayVisualizer2([1, 2, 3, 4,5,6,7,6,5,4,3,2,1,2,3,4,5,6,5,4,3,2,1,2,3,4, 5,4,3,2,1,2,3,4,3,2,1,2,3,2,1, -1, -2, -3, -4,-5,-6,-7,-6,-5,-4,-3,-2,-1,-2,-3,-4,-5,-6,-5,-4,-3,-2,-1,-2,-3,-4,-5,-4,-3,-2,-1,-2,-3,-4,-3,-2,-1,-2,-3,-2,-1]))
