@@ -36,3 +36,13 @@ const depthFirstValues = (root) =>{
 
 console.log(depthFirstValues(a))
 
+
+//Recursive solution of Depth first Traversal
+const depthFirstValuesRecursive = root =>{
+    if(root == null) return []
+    const leftVal = depthFirstValuesRecursive(root.left)
+    const rightVal = depthFirstValuesRecursive(root.right)
+    return [root, ...leftVal, ...rightVal]
+}
+
+console.log(depthFirstValuesRecursive(a))
