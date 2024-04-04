@@ -47,3 +47,22 @@ const depthFirstValuesRecursive = root =>{
 }
 
 //console.log(depthFirstValuesRecursive(a))
+
+
+//implementing Breath First using Queue data structure
+
+const breathFirstTrav = root =>{
+    if(root == null) return []
+    let queue = [root]
+    let result = []
+    while(queue.length>0){
+        let current = queue.pop()
+        result.push(current.val)
+        current.left?queue.unshift(current.left):null
+        current.right?queue.unshift(current.right):null
+    }
+    return result
+
+}
+
+console.log(breathFirstTrav(a))
