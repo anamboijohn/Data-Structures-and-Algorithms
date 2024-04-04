@@ -65,5 +65,24 @@ const breathFirstTrav = root =>{
 
 }
 
-console.log(breathFirstTrav(a))
+//console.log(breathFirstTrav(a))
+
+
+//breath first Search,
+//time and space complexity is O(n)
+const treeIncludes = (target, root) =>{
+    if(root == null) return []
+    let queue = [root]
+    while(queue.length>0){
+        let current = queue.pop()
+        if(current.val == target) return true
+        current.left?queue.unshift(current.left):null
+        current.right?queue.unshift(current.right):null
+    }
+    return false
+
+}
+
+console.log(treeIncludes('g', a))
+
 
