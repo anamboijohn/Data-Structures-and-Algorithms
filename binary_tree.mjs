@@ -19,6 +19,7 @@ b.left = d;
 b.right = e;
 
 //Depth first traversal
+//Both time and space complexity is O(n)
 const depthFirstValues = (root) =>{
     if(!(root instanceof Node)) return []
     let result =[]
@@ -34,7 +35,7 @@ const depthFirstValues = (root) =>{
     return result
 }
 
-console.log(depthFirstValues(a))
+//console.log(depthFirstValues(a))
 
 
 //Recursive solution of Depth first Traversal
@@ -45,4 +46,4 @@ const depthFirstValuesRecursive = root =>{
     return [root, ...leftVal, ...rightVal]
 }
 
-console.log(depthFirstValuesRecursive(a))
+//console.log(depthFirstValuesRecursive(a))
