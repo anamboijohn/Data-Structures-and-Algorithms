@@ -18,18 +18,18 @@ a.right = c;
 b.left = d;
 b.right = e;
 
-// const three = new Node(3)
-// const elv =   new Node(11)
-// const four =  new Node(4)
-// const two =   new Node(2)
-// const four2 = new Node(4)
-// // const one =   new Node(1)
+const three = new Node(3)
+const elv =   new Node(11)
+const four =  new Node(4)
+const two =   new Node(2)
+const four2 = new Node(4)
+const one =   new Node(1)
 
-// three.left = elv
-// three.right = four2
-// elv.left = four
-// elv.right = two
-// //four2.right = one
+three.left = elv
+three.right = four2
+elv.left = four
+elv.right = two
+four2.right = one
 
 
 //Depth first traversal
