@@ -83,6 +83,16 @@ const treeIncludes = (target, root) =>{
 
 }
 
-console.log(treeIncludes('g', a))
+console.log(treeIncludes(null, a))
+
+//depth first Search using recursion
+const treeIncludesRecursive = (target, root) =>{
+    if(root === null) return false
+    if(root.val === target) return true
+    return treeIncludesRecursive(target, root.left)||depthFirstValuesRecursive(target, root.right)
+
+}
+
+console.log(treeIncludes('a', a))
 
 
