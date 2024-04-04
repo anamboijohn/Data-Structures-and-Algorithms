@@ -50,7 +50,7 @@ const depthFirstValuesRecursive = root =>{
 
 
 //implementing Breath First using Queue data structure
-
+//Both space and time complexity is O(n)
 const breathFirstTrav = root =>{
     if(root == null) return []
     let queue = [root]
