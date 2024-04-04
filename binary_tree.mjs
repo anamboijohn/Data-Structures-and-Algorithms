@@ -66,3 +66,4 @@ const breathFirstTrav = root =>{
 }
 
 console.log(breathFirstTrav(a))
+
