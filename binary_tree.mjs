@@ -7,16 +7,30 @@ class Node{
 
 }
 
-const a = new Node('a')
-const b = new Node('b')
-const c = new Node('c')
-const d = new Node('d')
-const e = new Node('e')
+const a = new Node(1)
+const b = new Node(1)
+const c = new Node(1)
+const d = new Node(1)
+const e = new Node(1)
 
 a.left = b;
 a.right = c;
 b.left = d;
 b.right = e;
+
+// const three = new Node(3)
+// const elv =   new Node(11)
+// const four =  new Node(4)
+// const two =   new Node(2)
+// const four2 = new Node(4)
+// // const one =   new Node(1)
+
+// three.left = elv
+// three.right = four2
+// elv.left = four
+// elv.right = two
+// //four2.right = one
+
 
 //Depth first traversal
 //Both time and space complexity is O(n)
@@ -89,10 +103,21 @@ console.log(treeIncludes(null, a))
 const treeIncludesRecursive = (target, root) =>{
     if(root === null) return false
     if(root.val === target) return true
-    return treeIncludesRecursive(target, root.left)||depthFirstValuesRecursive(target, root.right)
+    return treeIncludesRecursive(target, root.left)||treeIncludesRecursive(target, root.right)
 
 }
 
-console.log(treeIncludes('a', a))
+console.log(treeIncludesRecursive(null, a))
 
 
+
+
+//Sum of tree
+//Time and space complexity O(n)
+const treeSum= (root) =>{
+    if(root === null) return 0
+    let left = treeIncludesRecursive(root.left)
+    let right = depthFirstValuesRecursive(target, root.right)
+    return left.val+right.val + root.val
+
+}
