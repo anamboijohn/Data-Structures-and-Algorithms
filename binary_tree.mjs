@@ -116,8 +116,8 @@ console.log(treeIncludesRecursive(null, a))
 //Time and space complexity O(n)
 const treeSum= (root) =>{
     if(root === null) return 0
-    let left = treeIncludesRecursive(root.left)
-    let right = depthFirstValuesRecursive(target, root.right)
-    return left.val+right.val + root.val
+    return root.val + treeSum(root.left) + treeSum(root.right)
 
 }
+
+console.log(treeSum(three))
