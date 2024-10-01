@@ -121,3 +121,6 @@ const treeSum= (root) =>{
 }
 
 console.log(treeSum(three))
+
+//TODO treeMon
+
